@@ -1,0 +1,18 @@
+# Default values for phpldapadmin
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+services:
+- host: services-example1
+  endpoints:
+  - 192.168.1.1
+  ports:
+  - name: sv1Port
+    port: 30000-32000
+
+- host: elasticmetric
+  endpoints:
+  - 192.168.1.2
+  ports:
+  - name: sv2Port
+    port: 30000-32000
