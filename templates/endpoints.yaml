@@ -20,7 +20,7 @@ subsets:
   ports:
   {{- range .ports }}
   - name: {{ .name }}
-    port: {{ .port }}
+    port: {{ .targetPort }}
     protocol: TCP
   {{- end }}
 ---

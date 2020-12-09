@@ -3,16 +3,21 @@
 # Declare variables to be passed into your templates.
 
 services:
-- host: services-example1
+## example for an external service endpoint
+- host: psql-external
   endpoints:
   - 192.168.1.1
   ports:
-  - name: sv1Port
-    port: 30000-32000
+  - name: psql-ext
+    # port range: 30000-32000
+    port: 30432
+    targetPort: 5432
 
-- host: elasticmetric
-  endpoints:
-  - 192.168.1.2
-  ports:
-  - name: sv2Port
-    port: 30000-32000
+# - host: dev-psql-internal
+#   endpoints:
+#   - 192.168.1.1
+#   ports:
+#   - name: psql-int
+#     port: 31432
+#     targetPort: 5432
+
